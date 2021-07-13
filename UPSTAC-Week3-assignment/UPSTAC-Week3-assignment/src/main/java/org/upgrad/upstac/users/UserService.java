@@ -101,7 +101,7 @@ public class UserService {
 
     public User addDoctor(RegisterRequest user) {
 
-        return addUserWithRole(user, roleService.getForDoctor(), AccountStatus.APPROVED);
+        return addUserWithRole(user, roleService.getForDoctor(), AccountStatus.INITIATED);
     }
     public User addGovernmentAuthority(RegisterRequest user) {
 
@@ -110,7 +110,7 @@ public class UserService {
 
     public User addTester(RegisterRequest user) {
 
-        return addUserWithRole(user, roleService.getForTester(), AccountStatus.APPROVED);
+        return addUserWithRole(user, roleService.getForTester(), AccountStatus.INITIATED);
     }
 
 
