@@ -62,8 +62,7 @@ public class ConsultationController {
         //throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED,"Not implemented");
 
         return testRequestQueryService.findBy(RequestStatus.LAB_TEST_COMPLETED);
-
-
+        //replaced code
 
     }
 
@@ -83,6 +82,7 @@ public class ConsultationController {
 
         User doctor =userLoggedInService.getLoggedInUser();
         return testRequestQueryService.findByDoctor(doctor);
+        //replaced code
 
     }
 
@@ -99,9 +99,11 @@ public class ConsultationController {
         //Create an object of TestRequest class and use the assignForConsultation() method of testRequestUpdateService to assign the particular id to the current user
         // return the above created object
         // For reference check the method assignForLabTest() method from LabRequestController class
+        
+        
+        //implementation
         try {
-            // replace this line of code with your implementation
-            //throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED,"Not implemented");
+            
             User doctor =userLoggedInService.getLoggedInUser();
             return   testRequestUpdateService.assignForConsultation(id,doctor);
 
@@ -124,9 +126,9 @@ public class ConsultationController {
         //to update the current test request id with the testResult details by the current user(object created)
         // For reference check the method updateLabTest() method from LabRequestController class
 
+        //implementation
         try {
-            // replace this line of code with your implementation
-            //throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED,"Not implemented");
+            
             User doctor=userLoggedInService.getLoggedInUser();
             return testRequestUpdateService.updateConsultation(id,testResult,doctor);
 
